@@ -4,3 +4,11 @@ bases:
 - ./prometheus
 configurations:
   - params.yaml
+vars:
+  - name: odh-model-controller
+    objref:
+      kind: ConfigMap
+      name: mesh-parameters
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-model-controller
